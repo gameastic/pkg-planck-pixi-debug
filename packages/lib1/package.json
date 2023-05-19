@@ -1,0 +1,33 @@
+{
+    "name": "@gameastic/lib1",
+    "version": "2.0.0",
+    "license": "MIT",
+    "source": "src/index.ts",
+    "main": "dist/index.js",
+    "author": "https://github.com/gameastic",
+    "description": "Some description for this lib",
+    "private": false,
+    "files": [
+        "dist/**/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:gameastic/lib1.git"
+    },
+    "bugs": {
+        "url": "https://github.com/gameastic/lib1/issues"
+    },
+    "keywords": [
+        "key1",
+        "key2"
+    ],
+    "homepage": "https://github.com/gameastic/lib1#readme",
+    "scripts": {
+        "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+        "test": "jest --config jestconfig.json",
+        "lint": "eslint 'src/**/*.{js,ts,ts}'",
+        "build": "npm run clean && tsc --build"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
