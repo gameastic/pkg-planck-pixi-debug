@@ -8,11 +8,13 @@
     "description": "Example for Lego",
     "private": true,
     "scripts": {
-        "start": "rimraf dist && parcel --port 8080"
+        "start": "parcel --port 8080 --cache-dir .parcel-cache"
     },
     "dependencies": {},
     "devDependencies": {
         "@gameastic/lib1": "*",
-        "parcel": "^2.6.2"
+        "parcel": "^2.8.3",
+        "parcel-reporter-static-files-copy": "^1.5.0",
+        "parcel-reporter-clean-dist": "^1.0.4"
     }
 }
