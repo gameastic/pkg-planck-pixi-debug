@@ -1,5 +1,11 @@
 # @gameastic/planck-testbed
 
+## 1.0.2
+
+### Patch Changes
+
+-   069bbdf: Graphics line width from user config
+
 ## 1.0.1
 
 ### Patch Changes
