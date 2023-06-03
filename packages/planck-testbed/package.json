@@ -1,27 +1,35 @@
 {
-    "name": "@gameastic/lib1",
+    "name": "@gameastic/planck-testbed",
     "version": "1.0.0",
     "license": "MIT",
     "source": "src/index.ts",
     "main": "dist/index.js",
     "author": "https://github.com/gameastic",
-    "description": "Some description for this lib",
+    "description": "PlankJS physics debugger for PixiJS",
     "private": false,
     "files": [
         "dist/**/*"
     ],
     "repository": {
         "type": "git",
-        "url": "git@github.com:gameastic/lib1.git"
+        "url": "git@github.com:gameastic/planck-testbed.git"
     },
     "bugs": {
-        "url": "https://github.com/gameastic/lib1/issues"
+        "url": "https://github.com/gameastic/planck-testbed/issues"
     },
     "keywords": [
-        "key1",
-        "key2"
+        "planck",
+        "planck-js",
+        "planck-debug",
+        "planck-debugger",
+        "planck-testbed",
+        "planck-pixi",
+        "planck-pixijs",
+        "planckjs-pixijs",
+        "planck-graphics",
+        "planck-phys-debug"
     ],
-    "homepage": "https://github.com/gameastic/lib1#readme",
+    "homepage": "https://github.com/gameastic/planck-testbed#readme",
     "scripts": {
         "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
         "test": "jest --config jestconfig.json",
