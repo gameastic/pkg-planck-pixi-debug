@@ -36,7 +36,10 @@ export class Stage extends Container {
         const testbed = new Testbed();
         testbed.init(world, graphics, {
             scale: 22, // 16
-            style: 'fancy', // 'simple'
+            style: {
+                theme: 'fancy', // 'simple',
+                lineWidth: 2, // 1
+            },
             origin: {
                 enabled: true, // true
                 transform: { x: screen.width * 0.5, y: screen.height * 0.5, length: 2 }, // x: 0, y: 0, length: 3

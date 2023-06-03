@@ -5,9 +5,9 @@ import { type IStrictOptions, type ITestbedOptions, type IVec } from './types';
 import { Utils, Vector } from './utils';
 
 let LINE_WIDTH = 0;
+let JOINT_STYLE = '';
 let FILL_STYLE = 'rgba(255, 255, 255, 0.1)';
 let STROKE_STYLE = 'rgba(255, 255, 255, 1)';
-const JOINT_STYLE = 'rgba(255, 255, 255, 0.5)';
 
 export class Testbed {
     private _world!: planck.World;
@@ -18,8 +18,7 @@ export class Testbed {
         this._initWorld(world);
         this._initOptions(options);
         this._initGraphics(graphics);
-
-        LINE_WIDTH = 1 / this._options.scale;
+        this._initStyle(this._options);
     }
 
     public draw(): void {
@@ -81,6 +80,13 @@ export class Testbed {
         this._graphics = graphics;
         this._graphics.scale.set(scale);
         this._graphics.position.set(x, y);
+    }
+
+    private _initStyle(opts: IStrictOptions): void {
+        const { scale, style } = opts;
+
+        LINE_WIDTH = style.lineWidth / scale;
+        JOINT_STYLE = 'rgba(255, 255, 255, 0.5)';
     }
 
     /**
@@ -229,10 +235,9 @@ export class Testbed {
         gr.drawRect(-0.1, -0.1, 0.2, 0.2);
     }
 
-    // REFACTOR
     private _updateStyle(b: planck.Body, style: IStrictOptions['style']): void {
         // @ts-expect-error => no type definition for planck.Body['m_type]
-        const { 0: strokeStyle, 1: fillStyle } = bodyColors[style][b.m_type](b.isActive(), b.isAwake());
+        const { 0: strokeStyle, 1: fillStyle } = bodyColors[style.theme][b.m_type](b.isActive(), b.isAwake());
 
         STROKE_STYLE = strokeStyle;
         FILL_STYLE = fillStyle;

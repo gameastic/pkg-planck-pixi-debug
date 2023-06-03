@@ -1,7 +1,7 @@
 import { type BodyType, type IStrictOptions } from './types';
 
 export const bodyColors: Record<
-    IStrictOptions['style'],
+    IStrictOptions['style']['theme'],
     Record<BodyType, (active: boolean, awake: boolean) => [string, string]>
 > = {
     simple: {
@@ -87,5 +87,8 @@ export const defaultOptions: IStrictOptions = {
             axisY: 'rgba(0, 255, 255, 0.5)',
         },
     },
-    style: 'fancy',
+    style: {
+        theme: 'fancy',
+        lineWidth: 1,
+    },
 };

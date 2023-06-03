@@ -6,7 +6,10 @@ type DeepRequired<T> = {
 
 export interface ITestbedOptions {
     scale: number;
-    style?: 'simple' | 'fancy';
+    style?: {
+        theme: 'simple' | 'fancy';
+        lineWidth: number;
+    };
     origin?: {
         enabled?: boolean;
         transform: { x?: number; y?: number; length?: number };
