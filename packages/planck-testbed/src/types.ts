@@ -12,7 +12,7 @@ export interface ITestbedOptions {
     };
     origin?: {
         enabled?: boolean;
-        transform: { x?: number; y?: number; length?: number };
+        transform?: { x?: number; y?: number; length?: number };
         colors?: {
             axisX?: string; // 'rgba(128, 128, 128, 0.5)'
             axisY?: string;
