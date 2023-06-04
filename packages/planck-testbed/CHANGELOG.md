@@ -1,5 +1,11 @@
 # @gameastic/planck-testbed
 
+## 1.0.3
+
+### Patch Changes
+
+-   45f8095: Typing fix
+
 ## 1.0.2
 
 ### Patch Changes
