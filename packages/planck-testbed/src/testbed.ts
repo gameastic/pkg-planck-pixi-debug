@@ -131,8 +131,8 @@ export class Testbed {
         gr.moveTo(bx + x1, -(by + y1));
         gr.lineTo(bx + x2, -(by + y2));
 
-        const aaa: number = 4;
-        const bbb: number = 4;
+        const aaa = 4;
+        const bbb = 4;
 
         const fn = (a: number, b: number): number => {
             return a + b;

@@ -2,10 +2,10 @@
 .*
 ~*
 !.npmrc
-!**/.eslintrc
-!**/.prettierrc
-!**/.eslintignore
-!**/.prettierignore
+!**/.eslintrc*
+!**/.prettierrc*
+!**/.eslintignore*
+!**/.prettierignore*
 !.github
 !.gitkeep
 !.changeset
@@ -90,14 +90,12 @@ Thumbs.db
 
 # track these files, if they exist
 !.gitignore
-!.eslintrc.js
-!.parcelrc
+!.eslintrc
 !.editorconfig
 !.phpcs.xml.dist
 
 # cached files
 packages/client/webpack/cache
-.parcel-cache
 
 # build files
 *.tsbuildinfo

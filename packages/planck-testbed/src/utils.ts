@@ -4,7 +4,6 @@ const isObject = (item: any): boolean => {
     return item && typeof item === 'object' && !Array.isArray(item);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Utils {
     export const mergeDeep = (target: any, ...sources: any[]): any => {
         if (!sources.length) {
@@ -29,7 +28,6 @@ export namespace Utils {
     };
 }
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Vector {
     export const add = (v1: IVec, v2: IVec): IVec => {
         const x = v1.x + v2.x;

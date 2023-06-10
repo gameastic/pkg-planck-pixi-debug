@@ -31,10 +31,10 @@
     ],
     "homepage": "https://github.com/gameastic/planck-testbed#readme",
     "scripts": {
+        "lint": "eslint 'src/**/*.{js,ts,ts}'",
         "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
         "test": "jest --config jestconfig.json",
-        "lint": "eslint 'src/**/*.{js,ts,ts}'",
-        "build": "npm run clean && tsc --build"
+        "build": "npm run clean && rollup --config ./rollup-config.mjs"
     },
     "dependencies": {},
     "devDependencies": {}

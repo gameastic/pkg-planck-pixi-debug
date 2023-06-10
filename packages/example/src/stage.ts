@@ -16,6 +16,9 @@ import {
 } from 'planck';
 
 export class Stage extends Container {
+    private readonly _world: planck.World;
+    private readonly _testbed: Testbed;
+
     public constructor() {
         super();
 
@@ -24,16 +27,16 @@ export class Stage extends Container {
         const graphics = new Graphics();
         this.addChild(graphics);
 
-        const world = new World({
+        const world = (this._world = new World({
             gravity: new Vec2(0.0, -10.0),
             velocityIterations: 4.0, // default => 8
             positionIterations: 2.0, // default => 3
             warmStarting: false,
             allowSleep: true,
-        });
+        }));
 
         // Debugger
-        const testbed = new Testbed();
+        const testbed = (this._testbed = new Testbed());
         testbed.init(world, graphics, {
             scale: 22, // 16
             style: {
@@ -44,11 +47,6 @@ export class Stage extends Container {
                 enabled: true, // true
                 transform: { x: screen.width * 0.5, y: screen.height * 0.5, length: 2 }, // x: 0, y: 0, length: 3
             },
-        });
-
-        window.game.ticker.add(() => {
-            world.step(1 / 60, 8, 3);
-            testbed.draw();
         });
 
         // Ground
@@ -285,4 +283,9 @@ export class Stage extends Container {
             })
         );
     }
+
+    public readonly update = (): void => {
+        this._world.step(1 / 60, 4, 2);
+        this._testbed.draw();
+    };
 }
