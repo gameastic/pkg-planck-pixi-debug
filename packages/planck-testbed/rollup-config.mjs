@@ -5,7 +5,7 @@ export default [
     {
         input: 'src/index.ts',
 
-        external: ['@box2d/core', 'pixi.js'],
+        external: ['planck', 'pixi.js'],
 
         output: [
             //
