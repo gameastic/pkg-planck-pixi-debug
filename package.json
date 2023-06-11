@@ -22,23 +22,23 @@
         ]
     },
     "devDependencies": {
-        "@changesets/cli": "^2.26.1",
-        "@types/jest": "^29.5.1",
         "@typescript-eslint/eslint-plugin": "^5.59.9",
         "@typescript-eslint/parser": "^5.59.9",
-        "eslint": "^8.42.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^4.2.1",
-        "husky": "^8.0.3",
-        "jest": "^29.5.0",
-        "nx": "^16.2.1",
-        "pixi.js": "^7.2.4",
-        "planck": "^1.0.0-alpha.4",
+        "@types/jest": "^29.5.1",
+        "@changesets/cli": "^2.26.1",
+        "typescript": "^5.0.4",
         "prettier": "^2.8.8",
-        "punycode": "^1.4.1",
-        "rimraf": "^5.0.0",
+        "eslint": "^8.42.0",
         "ts-jest": "^29.1.0",
+        "jest": "^29.5.0",
+        "husky": "^8.0.3",
         "turbo": "^1.10.3",
-        "typescript": "^5.0.4"
+        "nx": "^16.2.1",
+        "rimraf": "^5.0.0",
+        "punycode": "^1.4.1",
+        "pixi.js": "^7.2.4",
+        "planck": "^1.0.0-alpha.4"
     }
 }
