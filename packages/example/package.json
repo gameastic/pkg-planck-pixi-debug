@@ -2,18 +2,16 @@
     "name": "example",
     "version": "1.0.0",
     "license": "MIT",
-    "source": "index.html",
-    "main": "dist/index.js",
     "author": "https://github.com/gameastic",
     "description": "Example for Planck Testbed",
+    "source": "index.html",
     "private": true,
-    "type": "module",
     "scripts": {
         "lint": "eslint 'src/**/*.{js,ts,ts}'",
         "clean": "rimraf dist",
         "start": "npm run clean && mkdir dist && npm run _copy-assets && npm run _parcel-start",
         "_copy-assets": "copy-files-from-to",
-        "_parcel-start": "parcel index.html --cache-dir .parcel-cache --port 8080"
+        "_parcel-start": "parcel --cache-dir .parcel-cache --port 8080"
     },
     "copyFiles": [
         {

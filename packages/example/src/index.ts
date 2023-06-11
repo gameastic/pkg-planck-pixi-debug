@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
         public declare stage: Stage;
 
         public constructor() {
-            super({ resizeTo: window, backgroundColor: 0x000, hello: true });
+            super({ resizeTo: window, backgroundColor: 0x000, hello: true, antialias: true });
 
             void this.init().then(() => {
                 this.stage = new Stage();
