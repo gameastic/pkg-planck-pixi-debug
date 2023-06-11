@@ -17,15 +17,17 @@
             "cache": false
         },
         "lint": {
+            "dependsOn": ["^lint"],
             "outputs": [],
             "cache": false
         },
         "clean": {
+            "dependsOn": ["^clean"],
             "outputs": [],
             "cache": false
         },
         "prepublish": {
-            "dependsOn": ["build", "test", "lint"],
+            "dependsOn": ["lint", "test", "build"],
             "outputs": [],
             "cache": false
         }

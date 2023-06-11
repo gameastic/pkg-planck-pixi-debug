@@ -5,7 +5,18 @@
     "exclude": [],
 
     "compilerOptions": {
-        "strict": true,
-        "allowJs": true
+        "strict": false,
+
+        "module": "ESNext",
+        "target": "ESNext",
+
+        "baseUrl": ".",
+        "outDir": "./dist",
+
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+
+        "allowJs": true,
+        "declaration": true
     }
 }
