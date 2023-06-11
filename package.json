@@ -6,7 +6,7 @@
     "private": true,
     "scripts": {
         "start": "npx turbo run start --filter=example",
-        "build": "npx turbo run build",
+        "build": "npx turbo run build --filter=!example",
         "test": "npx turbo run test --filter=!example",
         "lint": "npx turbo run lint",
         "clean": "npx turbo run clean",
