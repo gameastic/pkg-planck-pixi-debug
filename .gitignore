@@ -4,7 +4,12 @@
 !.gitkeep
 !.changeset
 !.husky
-
+!.github
+!.npmrc
+!.eslintrc*
+!.eslintignore*
+!.prettierrc*
+!.prettierignore*
 
 # ignore node/grunt dependency directories
 **/node_modules/
