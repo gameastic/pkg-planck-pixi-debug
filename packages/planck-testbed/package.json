@@ -34,7 +34,7 @@
         "lint": "eslint 'src/**/*.{js,ts,ts}'",
         "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
         "test": "jest --config jestconfig.json",
-        "build": "npm run clean && rollup --config ./rollup-config.mjs"
+        "build": "tsc"
     },
     "dependencies": {},
     "devDependencies": {}

@@ -1,6 +1,4 @@
 {
-    "exclude": ["node_modules"],
-
     "compilerOptions": {
         "skipLibCheck": true,
         "strictNullChecks": true,

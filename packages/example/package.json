@@ -7,13 +7,24 @@
     "author": "https://github.com/gameastic",
     "description": "Example for Planck Testbed",
     "private": true,
+    "type": "module",
     "scripts": {
         "lint": "eslint 'src/**/*.{js,ts,ts}'",
-        "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
-        "start": "npm run clean && rollup --config ./rollup-config.mjs -w --sourcemap"
+        "clean": "rimraf dist",
+        "start": "npm run clean && mkdir dist && npm run _copy-assets && npm run _parcel-start",
+        "_copy-assets": "copy-files-from-to",
+        "_parcel-start": "parcel index.html --cache-dir .parcel-cache --port 8080"
     },
+    "copyFiles": [
+        {
+            "from": "assets",
+            "to": "dist"
+        }
+    ],
     "dependencies": {},
     "devDependencies": {
-        "@gameastic/planck-testbed": "*"
+        "@gameastic/planck-testbed": "*",
+        "copy-files-from-to": "^3.9.0",
+        "parcel": "^2.9.2"
     }
 }

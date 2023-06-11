@@ -1,3 +1,13 @@
 {
-    "words": ["turborepo", "tsbuildinfo", "jestconfig", "changesets", "gameastic", "pixi", "pixijs", "planckjs"]
+    "words": [
+        "outdir",
+        "turborepo",
+        "tsbuildinfo",
+        "jestconfig",
+        "changesets",
+        "gameastic",
+        "pixi",
+        "pixijs",
+        "planckjs"
+    ]
 }
